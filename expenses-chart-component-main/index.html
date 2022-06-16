@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Expenses chart component</title>
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+  <main>
+    <article class="expenses-app">
+      <section class="balance container">
+        <h2>
+          <p class="balance__text">My balance</p>
+          <div id="balance">$921.48</div>
+        </h2>
+        <div class="logo-container">
+          <img class="company-logo" src="images/logo.svg" alt="Company Logo">
+        </div>
+      </section>
+      <section class="resume container">
+        <h2>Spending - Last 7 days</h2>
+        <div class="chart-canvas">
+          <div class="mon-bar-wrapper">
+            <span class="amount">13</span>
+            <div class="mon-bar" id="mon-bar"></div>
+            <p>mon</p>
+          </div>
+          <div class="tue-bar-wrapper">
+            <span class="amount">13</span>
+            <div class="tue-bar" id="tue-bar"></div>
+            <p>tue</p>
+          </div>
+          <div class="wed-bar-wrapper">
+            <span class="amount">13</span>
+            <div class="wed-bar" id="wed-bar"></div>
+            <p>wed</p>
+          </div>
+          <div class="thu-bar-wrapper">
+            <span class="amount">13</span>
+            <div class="thu-bar" id="thu-bar"></div>
+            <p>thu</p>
+          </div>
+          <div class="fri-bar-wrapper">
+            <span class="amount">13</span>
+            <div class="fri-bar" id="fri-bar"></div>
+            <p>fri</p>
+          </div>
+          <div class="sat-bar-wrapper">
+            <span class="amount">13</span>
+            <div class="sat-bar" id="sat-bar"></div>
+            <p>sat</p>
+          </div>
+          <div class="sun-bar-wrapper">
+            <span class="amount">13</span>
+            <div class="sun-bar" id="sun-bar"></div>
+            <p>sun</p>
+          </div>
+        </div>
+        <div class="resume__text">
+          <h3>
+            <p class="resume__text--month">Total this month</p>
+            <span class="resume__amount" id="total-month">$478.33</span>
+          </h3>
+          <h4>
+            <p>+2.4%</p>
+            <span class="resume__text--last-month">from last month</span>
+          </h4>
+        </div>
+      </section>
+    </article>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>
