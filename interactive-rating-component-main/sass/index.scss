@@ -1,0 +1,133 @@
+@use 'root';
+@use 'reset';
+@use 'atribution';
+
+body {
+	margin: 0;
+	font-size: 15px;
+	font-family: var(--ff-primary);
+	line-height: 1.5;
+	background-color: #141519;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+/* Utility classes */
+
+.component-text {
+	color: var(--clr-secondary-300);
+}
+
+.rating-component * + * {
+	margin-bottom: 1rem;
+}
+
+.unselected {
+	background-color: var(--clr-btn-bg);
+	color: var(--clr-secondary-300);
+}
+
+.selected {
+	background-color: var(--clr-secondary-300);
+	color: var(--clr-secondary-100);
+}
+
+.flex {
+	display: flex;
+}
+
+.hidden {
+	display: none;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.center-text > * {
+	margin-inline: auto;
+}
+
+/* Element styles */
+
+.rating-component {
+	padding: 1.75rem;
+	max-width: 41ch;
+	width: 90.5%;
+	min-height: 24.5rem;
+	border-radius: 1.5rem;
+	color: var(--clr-secondary-100);
+	background-color: var(--clr-card-bg);
+}
+
+.star-icon-wrapper {
+	width: max-content;
+	margin-bottom: 1.5rem;
+	padding: 0.75rem;
+	border-radius: 50%;
+	background-color: var(--clr-btn-bg);
+}
+
+.rating-btn,
+.submit-btn {
+	transition: background-color 300ms, color 300ms;
+	font-weight: 700;
+}
+
+.rating-wrapper {
+	justify-content: space-between;
+
+	.rating-btn {
+		border: none;
+		width: 3rem;
+		height: 3rem;
+		padding: 0;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+	.rating-btn:hover {
+		background-color: var(--clr-primary-400);
+		color: var(--clr-secondary-100);
+	}
+}
+
+.rate-info {
+	width: max-content;
+	padding: 0.3rem 0.9rem;
+	border-radius: 1rem;
+	color: var(--clr-primary-400);
+	background-color: var(--clr-secondary-500);
+	background-color: black;
+	background-color: #262d37;
+}
+
+.submit-btn {
+	border: none;
+	width: 100%;
+	padding-block: 0.5rem;
+	margin-bottom: 0;
+	border-radius: 1rem;
+	text-transform: uppercase;
+	color: var(--clr-secondary-100);
+	background-color: var(--clr-primary-400);
+	cursor: pointer;
+}
+
+.submit-btn:hover {
+	background-color: var(--clr-secondary-100);
+	color: var(--clr-primary-400);
+}
+
+.thank-you-image {
+	margin-block: 1.5rem;
+}
+
+.rate-info {
+	margin-bottom: 1.75rem;
+}
