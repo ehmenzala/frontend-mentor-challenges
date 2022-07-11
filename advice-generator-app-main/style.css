@@ -1,0 +1,97 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+	--dark-blue-900: hsl(218, 23%, 16%);
+	--dark-blue-600: hsl(217, 19%, 24%);
+	--dark-blue-400: hsl(217, 19%, 38%);
+	--dark-blue-50: hsl(193, 38%, 86%);
+	--light-green-100: hsl(150, 100%, 66%);
+	--ff-primary: 'Manrope', sans-serif;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-primary);
+  background: var(--dark-blue-900);
+  line-height: 1.5;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.separator--desktop { 
+  display: none;
+  visibility: hidden;
+}
+
+.separator--mobile { 
+  display: block;
+  visibility: visible;
+  margin-inline: auto;
+}
+
+.advice-generator {
+	position: relative;
+	width: 80%;
+	max-width: 40ch;
+	padding: 1.5rem 1.5rem 3.75rem 1.5rem;
+	margin-inline: auto;
+	text-align: center;
+	border-radius: 10px;
+	background-color: var(--dark-blue-600);
+	color: var(--dark-blue-50);
+}
+
+.advice-generator .title {
+	font-size: 0.75rem;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	color: var(--light-green-100);
+}
+
+.advice-generator .advice {
+	margin-top: 0;
+	font-size: 28px;
+}
+
+.dice-btn {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	border: none;
+	border-radius: 50%;
+	margin-inline: auto;
+	width: max-content;
+	padding: 1.75rem;
+	background-color: var(--light-green-100);
+	background-image: url(images/icon-dice.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 25em) {
+  .separator--desktop {
+    display: block;
+    visibility: visible;
+  }
+
+  .separator--mobile {
+    display: none;
+    visibility: hidden;
+  }
+}
