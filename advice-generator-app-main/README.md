@@ -2,6 +2,10 @@
 
 ![Design preview for the Advice generator app coding challenge](./design/desktop-preview.jpg)
 
+## Live preview 🙋‍♂️
+
+[Click here](https://advice-generatoor.netlify.app/) for live preview.
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
