@@ -2,6 +2,11 @@
 
 ![Design preview for the QR code component coding challenge](./design/desktop-preview.jpg)
 
+## Live preview 🙋‍♂️
+
+[Click here](https://qr-code-compoonent.netlify.app/) for live preview.
+
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
