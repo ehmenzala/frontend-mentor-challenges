@@ -100,4 +100,36 @@ select {
   --ff-400: "Inter", sans-serif;
 }
 
+.container {
+  width: 1440px;
+  max-width: 80%;
+  margin-inline: auto;
+}
+
+body {
+  font-family: var(--ff-400);
+  font-size: var(--fs-400);
+  color: var(--clr-secondary-blue-500);
+  background-color: var(--clr-off-white);
+}
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4.5rem;
+  padding-bottom: 3rem;
+}
+
+.page-links {
+  padding-left: 0;
+  margin-block: 0;
+  display: flex;
+  gap: 2rem;
+}
+.page-links__link {
+  text-decoration: none;
+  color: inherit;
+}
+
 /*# sourceMappingURL=style.css.map */
