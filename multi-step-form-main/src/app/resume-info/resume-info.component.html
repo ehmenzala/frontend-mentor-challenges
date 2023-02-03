@@ -1,0 +1,15 @@
+<div class="resume-table">
+  <div class="resume-table__plan-contents">
+    <p class="resume-table__plan">{{ purchaseForm.value.planInfo.plan | titlecase }}</p>
+    <a href="#" class="resume-table__change-plan-link">Change</a>
+  </div>
+  <p class="resume-table__plan-price resume-table__price">$9/mo</p>
+  <ng-container *ngFor="let addon of this.purchaseForm.value.addons">
+    <h3 class="resume-table__add-on-title">{{ addon }}</h3>  
+    <p class="resume-table__add-on-title">$2/mo</p>
+  </ng-container>
+</div>
+<div class="resume-table__total-contents">
+  <p class="resume-table__total">Total (per month)</p>
+  <p class="resume-table__total-price">+$13/mo</p>
+</div>

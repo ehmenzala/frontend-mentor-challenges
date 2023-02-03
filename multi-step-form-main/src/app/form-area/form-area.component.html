@@ -1,0 +1,39 @@
+<fieldset class="form-container__section">
+
+  <legend class="form-container__title">{{ formAreaTitle }}</legend>
+  <p class="form-container__description">{{ formAreaDescription }}</p>
+
+  <app-personal-info
+    *ngIf="currentStep < 5"
+    [ngClass]="currentStep === 1 ? '' : 'hidden'"
+    [name]="name"
+    [email]="email"
+    [phone]="phone"
+  ></app-personal-info>
+
+  <app-plan-info
+    *ngIf="currentStep < 5"
+    [ngClass]="currentStep === 2 ? '' : 'hidden'"
+    [plan]="plan"
+    [billing]="billing"
+  ></app-plan-info>
+
+  <app-add-ons-info
+    *ngIf="currentStep < 5"
+    [addons]="addons"
+    [ngClass]="currentStep === 3 ? '' : 'hidden'"
+  ></app-add-ons-info>
+
+  <app-resume-info
+    [purchaseForm]="purchaseForm"
+    *ngIf="currentStep < 5"
+    [ngClass]="currentStep === 4 ? '' : 'hidden'"
+  ></app-resume-info>
+
+  <div class="final-window hidden" *ngIf="currentStep > 4">
+    <img src="assets/images/icon-thank-you.svg" alt="Red checkmark">
+    <h2 class="final-window__title">Thank you!</h2>
+    <p class="final-window__desc">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+  </div>
+</fieldset>
+

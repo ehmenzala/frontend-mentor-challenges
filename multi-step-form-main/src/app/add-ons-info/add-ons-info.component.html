@@ -1,0 +1,17 @@
+<div class="input-box add-on" *ngFor="let choice of checks">
+  <div class="add-on__contents">
+    <label for="customizable-profile">
+      <p class="add-on__title">{{ choice.title }}</p>
+      <p class="add-on__desc">{{ choice.description }}</p>
+    </label>
+    <input
+      class="form-container__input"
+      type="checkbox" id="customizable-profile"
+      [value]="choice.value"
+      (change)="onCheckChange($event)">
+    <div class="fake-checkbox">
+      <img class="fake-checkbox__img" src="assets/images/icon-checkmark.svg" alt="Checkmark">
+    </div>
+  </div>
+  <p class="add-on__pricing">{{ choice.price }}</p>
+</div>

@@ -1,0 +1,40 @@
+<main>
+  <article class="app-wrapper">
+    <div class="steps-wrapper">
+      <ol class="steps" role="list">
+        <app-form-step *ngFor="let stepInfo of steps" [step]="stepInfo" [currentStep]="step"></app-form-step>
+      </ol>
+    </div>
+    <div class="form-wrapper">
+      <form action="" class="form-container" [formGroup]="purchaseForm">
+        <app-form-area
+          *ngIf="step < 5"
+          [purchaseForm]="purchaseForm"
+          [name]="name"
+          [email]="email"
+          [phone]="phone"
+          [plan]="plan"
+          [billing]="billing"
+          [addons]="addons"
+          [currentStep]="step"
+          [formAreaTitle]="formAreaInfo[step - 1].title"
+          [formAreaDescription]="formAreaInfo[step - 1].description"
+          ></app-form-area>
+        <div *ngIf="step === 5" class="final-window">
+          <img src="assets/images/icon-thank-you.svg" alt="Red checkmark">
+          <h2 class="final-window__title">Thank you!</h2>
+          <p class="final-window__desc">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+        </div>
+      </form>
+      <div *ngIf="step !== 5" class="form-controls">
+        <button (click)="prevStep()" *ngIf="step !== 1 && step !== 5" type="button" class="btn btn--secondary">Go Back</button>
+        <button (click)="nextStep()" *ngIf="step < 3" type="button" class="btn btn--primary">Next Step</button>
+        <button (click)="nextStep()" *ngIf="step === 3" [disabled]="!purchaseForm.valid" type="button" class="btn btn--primary">Next Step</button>
+        <button (click)="nextStep()" *ngIf="step === 4" type="submit" class="btn btn--final">Confirm</button>
+      </div>
+    </div>
+    <div style="position: absolute; left: 0; bottom: 0; height: 300px; width: 250px; background-color: #333; color: #eee;">
+      <pre>Form values: {{ purchaseForm.value | json }}</pre>
+    </div>
+  </article>
+</main>

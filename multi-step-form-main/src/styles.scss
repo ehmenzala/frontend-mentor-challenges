@@ -1,0 +1,193 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url(assets/fonts/Ubuntu-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url(assets/fonts/Ubuntu-Medium.ttf) format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url(assets/fonts/Ubuntu-Bold.ttf) format('truetype');
+  font-weight: 700;
+}
+
+:root {
+  --clr-red-400: hsl(354, 84%, 57%);
+
+  --clr-primary-100: hsl(215, 100%, 97%);
+  --clr-primary-200: hsl(206, 94%, 87%);
+  --clr-primary-250: hsl(230, 75%, 98%);
+  --clr-primary-300: hsl(228, 100%, 84%);
+  --clr-primary-400: hsl(243, 100%, 62%);
+  --clr-primary-600: hsl(213, 96%, 18%);
+
+  --clr-accent-0: hsl(0, 0%, 100%);
+  --clr-accent-100: hsl(231, 100%, 99%);
+  --clr-accent-400: hsl(231, 11%, 63%);
+  --clr-accent-300: hsl(229, 24%, 87%);
+  --clr-accent-200: hsl(217, 100%, 97%);
+
+  --ff-400: 'Ubuntu';
+
+  --fs-300: .85rem;
+  --fs-400: 1rem;
+  --fs-500: 1.15rem;
+  --fs-600: 1.35rem;
+  
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+legend {
+  padding-inline: 0;
+}
+
+fieldset {
+  margin-inline: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: var(--ff-400);
+  background-color: var(--clr-primary-100);
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: .75em 1.25em;
+  font-weight: var(--fw-400);
+  border-radius: 10px;
+
+  &--primary {
+    background-color: var(--clr-primary-600);
+    color: var(--clr-accent-0);
+  }
+
+  &--secondary {
+    background-color: var(--clr-accent-0);
+    color: var(--clr-accent-400);
+  }
+
+  &--final {
+    background-color: var(--clr-primary-400);
+    color: var(--clr-accent-0);
+  }
+}
+
+.form-container {
+
+  &__title {
+    font-weight: var(--fw-600);
+    font-size: 2em;
+  }
+
+  &__description {
+    color: var(--clr-accent-400);
+  }
+
+}

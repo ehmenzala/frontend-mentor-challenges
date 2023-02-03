@@ -1,0 +1,7 @@
+<li class="step">
+  <span class="step__number" [ngClass]="step.number === currentStep ? 'active' : ''">{{ step.number }}</span>
+  <div class="step__contents">
+    <p class="step__title">{{ step.title }}</p>
+    <p class="step__desc">{{ step.description }}</p>
+  </div>
+</li>

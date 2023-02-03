@@ -1,0 +1,30 @@
+<div class="input-box">
+  <label for="name" class="form-container__label">Name</label>
+  <input 
+    [formControl]="name"
+    class="form-container__input"
+    type="text" name="name" id="name"
+    placeholder="e.g. Stephen King"
+    required
+  >
+</div>
+<div class="input-box">
+  <label for="email" class="form-container__label">Email Address</label>
+  <input
+    [formControl]="email"
+    class="form-container__input"
+    type="email" name="email" id="email"
+    placeholder="e.g. stephenking@lorem.com"
+    required
+  >
+</div>
+<div class="input-box">
+  <label for="phone" class="form-container__label">Phone Number</label>
+  <input
+    [formControl]="phone"
+    class="form-container__input"
+    type="tel" name="phone" id="phone"
+    placeholder="e.g. +1 234 567 890"
+    required
+  >
+</div>

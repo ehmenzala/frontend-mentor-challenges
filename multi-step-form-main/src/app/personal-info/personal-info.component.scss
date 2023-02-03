@@ -1,0 +1,34 @@
+.input-box {
+  margin-top: 1rem;
+}
+
+.form-container {
+
+  &__label,
+  &__input {
+    color: var(--clr-primary-600);
+  }
+  
+  &__label {
+    display: block;
+  }
+
+  &__input[type="text"],
+  &__input[type="email"],
+  &__input[type="tel"] {
+    min-width: 100%;
+    padding: .75rem;
+    border: 1px solid var(--clr-accent-300);
+    border-radius: 10px;
+    font-weight: var(--fw-500);
+
+    &:focus {
+      outline: 1.6px solid var(--clr-primary-400);
+    }
+
+    // &:invalid {
+    //   outline: 1.6px solid red;
+    // }
+  }
+
+}

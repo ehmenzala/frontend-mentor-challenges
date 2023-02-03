@@ -1,0 +1,38 @@
+<div class="plan-options">
+  <div class="plan-option">
+    <input [formControl]="plan" class="form-container__input" type="radio" name="plan" id="arcade-plan" value="arcade">
+    <label for="arcade-plan" class="visually-hidden">Arcade plan: Costs 9 dollars per month</label>
+    <img class="plan-option__img" src="assets/images/icon-arcade.svg" alt="Joystick icon">
+    <div class="plan-option__contents">
+      <h3 class="plan-option__title">Aracade</h3>
+      <p class="plan-option__price">$9/mo</p>
+    </div>
+  </div>
+  <div class="plan-option">
+    <input [formControl]="plan" class="form-container__input" type="radio" name="plan" id="advanced-plan" value="advanced">
+    <label for="advanced-plan" class="visually-hidden">Advanced plan: Costs 12 dollars per month</label>
+    <img class="plan-option__img" src="assets/images/icon-advanced.svg" alt="Retro game controller icon">
+    <div class="plan-option__contents">
+      <h3 class="plan-option__title">Advanced</h3>
+      <p class="plan-option__price">$12/mo</p>
+    </div>
+  </div>
+  <div class="plan-option">
+    <input [formControl]="plan" class="form-container__input" type="radio" name="plan" id="pro-plan" value="pro">
+    <label for="pro-plan" class="visually-hidden">Pro plan: Costs 15 dollars per month</label>
+    <img class="plan-option__img" src="assets/images/icon-pro.svg" alt="Game controller icon">
+    <div class="plan-option__contents">
+      <h3 class="plan-option__title">Pro</h3>
+      <p class="plan-option__price">$15/mo</p>
+    </div>
+  </div>
+</div>
+<div class="billing-wrapper">
+  <div class="billing">
+    <label for="monthly">Monthly</label>
+    <input #firstRadio [formControl]="billing" type="radio" name="billing" id="monthly" value="monthly" checked>
+    <button (click)="onToggleClick(firstRadio, secondRadio)" class="billing__toggle" aria-hidden="true"></button>
+    <label for="yearly">Yearly</label>
+    <input #secondRadio [formControl]="billing" type="radio" name="billing" id="yearly" value="yearly">
+  </div>
+</div>
