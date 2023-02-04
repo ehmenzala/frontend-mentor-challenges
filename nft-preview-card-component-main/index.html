@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--prettier-ignore-->
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<!--prettier-ignore-->
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Frontend Mentor | NFT preview card component</title>
+	</head>
+	<body>
+		<article class="nft-card">
+			<!--prettier-ignore-->
+			<div class="nft-card__image-wrapper">
+        <img class="nft-card__image" src="images/image-equilibrium.jpg" alt="NFT preview image" />
+        <div class="nft-card__visualize"></div>
+      </div>
+			<h2 class="nft-card__title">Equilibrium #3429</h2>
+			<p class="nft-card__text">Our Equilibrium collection promotes balance and calm.</p>
+			<!--prettier-ignore-->
+			<div class="nft-card-data">
+				<div class="card-price">
+					<img class="card-price__icon" src="images/icon-ethereum.svg" alt="Ethereum icon" />
+					<p class="card-price__text">0.041 ETH</p>
+				</div>
+				<div class="card-remaining">
+					<img class="card-remaining__icon" src="images/icon-clock.svg" alt="Clock icon" />
+					<p class="card-remaining__text">3 days left</p>
+				</div>
+			</div>
+			<div class="nft-card-owner">
+				<div class="nft-card-owner__image-wrapper">
+					<!--prettier-ignore-->
+					<img class="nft-card-owner__image" src="images/image-avatar.png" alt="Owner avatar" />
+				</div>
+				<p class="nft-card-owner__text">
+					<span class="highlighted">Creation of</span>
+					<span class="creator">Jules Wyvern</span>
+				</p>
+			</div>
+		</article>
+	</body>
+</html>
