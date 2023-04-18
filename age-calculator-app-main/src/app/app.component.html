@@ -1,1 +1,30 @@
-<h1>Initial project files</h1>
+<main>
+  <article class="age-calculator">
+    <form>
+      <div class="inputs">
+        <div class="input-box">
+          <label class="input-box__label" for="day">Day</label>
+          <input placeholder="DD" class="input-box__input" type="number" id="day" />
+        </div>
+        <div class="input-box">
+          <label class="input-box__label" for="month">Month</label>
+          <input placeholder="MM" class="input-box__input" type="number" id="month" />
+        </div>
+        <div class="input-box">
+          <label class="input-box__label" for="year">Year</label>
+          <input placeholder="YYYY" class="input-box__input" type="number" id="year" />
+        </div>
+      </div>
+
+      <button class="calc-btn" type="submit">
+        <img src="assets/images/icon-arrow.svg" />
+      </button>
+
+      <output class="output" for="day month year">
+        <p><span class="output__dash">38</span> years</p>
+        <p><span class="output__dash">3</span> months</p>
+        <p><span class="output__dash">26</span> days</p>
+      </output>
+    </form>
+  </article>
+</main>
